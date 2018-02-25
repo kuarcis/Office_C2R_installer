@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="version" xml:space="preserve">
-    <value>0.2</value>
+  <metadata name="pathfinder_1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 22</value>
+  </metadata>
+  <data name="path_hint1.Text" xml:space="preserve">
+    <value>Hint: If already downloaded , select the PARENT FLODER of "Office" as the source.
+If selected path didnt contain all the file require for install, 
+setup.exe will download all the required file to the source folder.
+If leave this path blank, setup.exe will download files to where it located.</value>
   </data>
+  <metadata name="filefinder_1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>197, 22</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>57</value>
+  </metadata>
 </root>
