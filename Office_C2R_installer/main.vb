@@ -1,5 +1,6 @@
 ﻿Imports System.Security
 Imports System.IO
+Imports System.Globalization
 
 Public Class C2R_XML_maker
 
@@ -33,7 +34,7 @@ Public Class C2R_XML_maker
     'empty cfg is kind of 'altered', compare with the assuming completed one
     Public cfg_alter As Boolean = True
     Public use32or64 As Integer
-
+    Public sys_langid As String
     'control of altering event
     Private Sub alter_handler(sender As Object, e As EventArgs)
         cfg_alter = True
@@ -49,7 +50,16 @@ Public Class C2R_XML_maker
     'onload events
     Public Sub C2R_XML_maker_Load(sender As Object, e As EventArgs) Handles Me.Load
         Text += My.Resources.version
-
+        sys_langid = CultureInfo.CurrentCulture.ToString
+        Dim langid_idx As Integer = 8 'if can't find match langID, use en-us as default
+        'find default langid
+        For Each id_tmp In langID
+            If id_tmp.ToUpper = sys_langid.ToUpper Then
+                langid_idx = langID.FindIndex(Function(ids As String)
+                                                  Return ids = id_tmp
+                                              End Function)
+            End If
+        Next
 
         Dim fill_tmp As String
         For Each fill_tmp In productID
@@ -64,7 +74,7 @@ Public Class C2R_XML_maker
         RadioButton_64bit.Checked = True
         use32or64 = 64
         edition_list.SelectedIndex = 0
-        lang_list.SelectedIndex = 3
+        lang_list.SelectedIndex = langid_idx
 
         'add handlers to all controls
         For Each GroupBoxCntrol As Control In Controls
@@ -158,7 +168,7 @@ Public Class C2R_XML_maker
 
         If pathfinder_1.ShowDialog() = DialogResult.Cancel Then
             cfg_path_label.Text = check_path
-            pathfinder_1.SelectedPath = check_path
+
 
         ElseIf check_path <> (pathfinder_1.SelectedPath & "\") Then
             cfg_path_label.Text = (pathfinder_1.SelectedPath & "\")
@@ -229,7 +239,6 @@ Public Class C2R_XML_maker
             tmp_prev_text_list.Add("        </Product>" & vbCrLf)
             tmp_prev_text_list.Add("    </Add>" & vbCrLf)
             tmp_prev_text_list.Add("    <logging level=""standard""/> " & vbCrLf)
-
             tmp_prev_text_list.Add("</Configuration>" & vbCrLf)
 
             'preview writer

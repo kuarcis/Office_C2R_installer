@@ -66,6 +66,7 @@ Partial Class C2R_XML_maker
         Me.save_cfg_only = New System.Windows.Forms.Button()
         Me.save_and_install = New System.Windows.Forms.Button()
         Me.info = New System.Windows.Forms.Button()
+        Me.Note_1 = New System.Windows.Forms.Label()
         Me.preview_group.SuspendLayout()
         Me.src_ctl_group.SuspendLayout()
         Me.edtion_ctl_group.SuspendLayout()
@@ -294,6 +295,7 @@ Partial Class C2R_XML_maker
         '
         'cpomnt_ctl_group
         '
+        Me.cpomnt_ctl_group.Controls.Add(Me.Note_1)
         Me.cpomnt_ctl_group.Controls.Add(Me.product_clean)
         Me.cpomnt_ctl_group.Controls.Add(Me.product_all)
         Me.cpomnt_ctl_group.Controls.Add(Me.porduct10)
@@ -311,7 +313,7 @@ Partial Class C2R_XML_maker
         Me.cpomnt_ctl_group.Font = New System.Drawing.Font("微軟正黑體", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.cpomnt_ctl_group.Location = New System.Drawing.Point(12, 317)
         Me.cpomnt_ctl_group.Name = "cpomnt_ctl_group"
-        Me.cpomnt_ctl_group.Size = New System.Drawing.Size(541, 122)
+        Me.cpomnt_ctl_group.Size = New System.Drawing.Size(541, 135)
         Me.cpomnt_ctl_group.TabIndex = 12
         Me.cpomnt_ctl_group.TabStop = False
         Me.cpomnt_ctl_group.Text = "Install Components"
@@ -480,7 +482,7 @@ Partial Class C2R_XML_maker
         Me.cfg_ctl_group.Controls.Add(Me.cfg_path_label)
         Me.cfg_ctl_group.Controls.Add(Me.cfg_path_sel)
         Me.cfg_ctl_group.Font = New System.Drawing.Font("微軟正黑體", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.cfg_ctl_group.Location = New System.Drawing.Point(12, 445)
+        Me.cfg_ctl_group.Location = New System.Drawing.Point(12, 458)
         Me.cfg_ctl_group.Name = "cfg_ctl_group"
         Me.cfg_ctl_group.Size = New System.Drawing.Size(541, 54)
         Me.cfg_ctl_group.TabIndex = 13
@@ -521,7 +523,7 @@ Partial Class C2R_XML_maker
         '
         Me.gen_preview.Font = New System.Drawing.Font("微軟正黑體", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.gen_preview.ForeColor = System.Drawing.Color.Red
-        Me.gen_preview.Location = New System.Drawing.Point(12, 514)
+        Me.gen_preview.Location = New System.Drawing.Point(12, 518)
         Me.gen_preview.Name = "gen_preview"
         Me.gen_preview.Size = New System.Drawing.Size(168, 61)
         Me.gen_preview.TabIndex = 14
@@ -531,7 +533,7 @@ Partial Class C2R_XML_maker
         'save_cfg_only
         '
         Me.save_cfg_only.Font = New System.Drawing.Font("微軟正黑體", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.save_cfg_only.Location = New System.Drawing.Point(200, 514)
+        Me.save_cfg_only.Location = New System.Drawing.Point(200, 518)
         Me.save_cfg_only.Name = "save_cfg_only"
         Me.save_cfg_only.Size = New System.Drawing.Size(168, 61)
         Me.save_cfg_only.TabIndex = 15
@@ -541,7 +543,7 @@ Partial Class C2R_XML_maker
         'save_and_install
         '
         Me.save_and_install.Font = New System.Drawing.Font("微軟正黑體", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.save_and_install.Location = New System.Drawing.Point(374, 514)
+        Me.save_and_install.Location = New System.Drawing.Point(374, 518)
         Me.save_and_install.Name = "save_and_install"
         Me.save_and_install.Size = New System.Drawing.Size(166, 61)
         Me.save_and_install.TabIndex = 16
@@ -557,11 +559,20 @@ Partial Class C2R_XML_maker
         Me.info.Text = "Info"
         Me.info.UseVisualStyleBackColor = True
         '
+        'Note_1
+        '
+        Me.Note_1.AutoSize = True
+        Me.Note_1.Location = New System.Drawing.Point(16, 110)
+        Me.Note_1.Name = "Note_1"
+        Me.Note_1.Size = New System.Drawing.Size(323, 16)
+        Me.Note_1.TabIndex = 18
+        Me.Note_1.Text = "Note: OneDrive personal version will always be installed."
+        '
         'C2R_XML_maker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1071, 583)
+        Me.ClientSize = New System.Drawing.Size(1071, 591)
         Me.Controls.Add(Me.info)
         Me.Controls.Add(Me.save_and_install)
         Me.Controls.Add(Me.save_cfg_only)
@@ -634,4 +645,5 @@ Partial Class C2R_XML_maker
     Friend WithEvents save_and_install As Button
     Friend WithEvents preview_text As TextBox
     Friend WithEvents info As Button
+    Friend WithEvents Note_1 As Label
 End Class

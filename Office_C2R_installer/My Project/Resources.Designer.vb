@@ -61,7 +61,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查詢類似 0.2 的當地語系化字串。
+        '''  查詢類似 0.21 的當地語系化字串。
         '''</summary>
         Public ReadOnly Property version() As String
             Get
