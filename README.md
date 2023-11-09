@@ -1,16 +1,23 @@
 # Office 2016/365 C2R Setup config.xml Maker And Installer
+## Overview
+Office_C2R_installer is a utility designed to create a custom config.xml file for installing Office 2016/365 components. This tool simplifies the process of generating a config.xml that can be used with the Office 2016/365 Deployment Tool, allowing for a customized installation of Office components.
 
-This is a small tool to build up a working config xml file for Office 2016/365 costume component install.
-this tool require Office 2016/365 Deployment Tool
+## Prerequisites
+Before you can use Office_C2R_installer, you must have the Office 2016/365 Deployment Tool installed. You can download it from the Microsoft website:
+Office 2016/365 Deployment Tool Download
 
-As you may already know, the C2R install method is way too simple, 
-with this tool, you can generate a working config xml and install using the xml generated
+## Usage Guide
+Download the Office Deployment Tool from the link provided above.
+Run Office_C2R_installer to generate a config.xml file based on your preferences for a custom Office installation.
+Use the generated config.xml with the Office Deployment Tool to install Office components as per your configuration.
 
-Currently, I have no intention to add any more options for this tool. I think in this current state, this tool is already enough for general usage.
-(i.e. only want to install word and excel, or don't want to install outlook)
-Of course, any suggestion is welcome.
+## Additional Information
+The tool is currently in a state that the author considers sufficient for general use, such as installing only specific Office applications like Word and Excel, or excluding certain applications like Outlook.
+Suggestions for improvements are welcome.
+The source code is provided to ensure transparency and avoid antivirus alerts that similar tools have caused.
 
-And yes, I know there's already a Russian guy made something like this, but the installer he made always trigger my antivirus alert, so, I made another one, with source code.
+## Support and Contributions
+For issues or feature requests, you can reach out to the maintainers via email at care@sider.ai.
 
-Office 2016/365 Deployment tool download page:
-[https://www.microsoft.com/en-us/download/details.aspx?id=49117 ](https://www.microsoft.com/en-us/download/details.aspx?id=49117 )
+## License
+Please ensure that you respect copyrights when using or distributing this tool.
