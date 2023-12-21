@@ -17,7 +17,7 @@ Suggestions for improvements are welcome.
 The source code is provided to ensure transparency and avoid antivirus alerts that similar tools have caused.
 
 ## Support and Contributions
-For issues or feature requests, you can reach out to the maintainers via email at care@sider.ai.
+For issues or feature requests, you can reach out to the maintainer.
 
 ## License
 Please ensure that you respect copyrights when using or distributing this tool.
